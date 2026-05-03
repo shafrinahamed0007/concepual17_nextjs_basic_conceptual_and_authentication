@@ -2,17 +2,17 @@
     "models": [
         {
             "id": 1,
-            "title": "ChatGPT",
+            "title": "ChatGPT (Pro)",
             "description": "The world's most popular AI assistant by OpenAI.\nVersatile for writing, coding, reasoning, and creative tasks.",
-            "price": 20,
+            "price": 35,
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png",
             "status": "popular"
         },
         {
             "id": 2,
-            "title": "Grok",
+            "title": "Grok Pro",
             "description": "Built by xAI with real-time knowledge from X.\nHelpful, witty, and maximally truth-seeking AI.",
-            "price": 30,
+            "price": 75,
             "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/grok-icon.png",
             "status": "favourite"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "title": "DeepSeek",
             "description": "Powerful open-source focused AI from China.\nExcellent at coding, math, and cost-effective reasoning.",
-            "price": 0,
+            "price": 50,
             "image": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/deepseek-logo-icon.png",
             "status": "mostwanted"
         },
