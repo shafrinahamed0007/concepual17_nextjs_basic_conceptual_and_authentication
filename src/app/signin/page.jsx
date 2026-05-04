@@ -1,7 +1,5 @@
 "use client";
 
-import { authClient } from "@/lib/auth-client";
-import { Check } from "@gravity-ui/icons";
 import {
   Button,
   Description,
@@ -12,30 +10,21 @@ import {
   TextField,
 } from "@heroui/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Check } from "@gravity-ui/icons";
+import { authClient } from "@/lib/auth-client";
 
-const SignUpPage = () => {
-  const router = useRouter();
+const SignInPage = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // console.log("Sign Up Data: ", name, email, password);
-
-    const { data, error } = await authClient.signUp.email(
-      {
-        email,
-        name,
-        password,
-      },
-      {
-        onSuccess: () => {
-          router.push("/");
-        },
-      },
-    );
+    const { data, error } = authClient.signIn.email({
+      email,
+      password,
+      callbackURL: "/",
+    });
+    console.log("Login Details: ", email, password);
   };
   return (
     <div className="container mx-auto mt-10 ">
@@ -43,11 +32,6 @@ const SignUpPage = () => {
         onSubmit={onSubmit}
         className="flex w-96 flex-col gap-4 p-6 shadow-lg rounded-xl"
       >
-        <TextField isRequired name="name" type="name">
-          <Label>Your Name</Label>
-          <Input placeholder="Enter your Name" />
-          <FieldError />
-        </TextField>
         <TextField
           isRequired
           name="email"
@@ -97,10 +81,16 @@ const SignUpPage = () => {
             Reset
           </Button>
         </div>
-        <p>Already have an account? <Link className="text-blue-500 underline" href={"/signin"}>Login</Link></p>
+        <p>
+          You have not register yet?{" "}
+          <Link className="text-blue-500 underline" href={"/signup"}>
+            Register
+          </Link>
+        </p>
+       
       </Form>
     </div>
   );
 };
 
-export default SignUpPage;
+export default SignInPage;
