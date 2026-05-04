@@ -7,6 +7,7 @@ const Navbar = async () => {
       <div className="flex gap-5 justify-center">
         <Link href={"/models"}>Models</Link>
         <Link href={"/"}>Home</Link>
+        <Link href={"/signup"}>Sign Up</Link>
       </div>
     </div>
   );

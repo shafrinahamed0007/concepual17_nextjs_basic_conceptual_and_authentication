@@ -16,7 +16,7 @@ const ModelsPage = async () => {
     cache: "no-store",
   }).then((res) => res.json());
 
-  console.log("Models Data: ", models);
+  // console.log("Models Data: ", models);
   return (
     <div className="space-y-10 container mx-auto">
       <h1>Models Page</h1>
