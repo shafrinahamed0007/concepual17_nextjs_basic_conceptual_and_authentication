@@ -20,6 +20,7 @@ const Navbar = () => {
       <div className="flex gap-5 justify-center">
         <Link href={"/models"}>Models</Link>
         <Link href={"/"}>Home</Link>
+        <Link href={"/server-action"}>Server Action</Link>
         <Link href={"/signup"}>Register</Link>
         <Link href={"/signin"}>Login</Link>
         <div>
