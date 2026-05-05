@@ -4,8 +4,9 @@ const posts = [
   { id: 3, title: "third Psot", description: "vsdfsdfdf" },
 ];
 
-const addPost = (newPost) => {
+export const addPost = (newPost) => {
   posts.push(newPost);
+  console.log(posts);
 };
 
 export const getPosts = () => {
